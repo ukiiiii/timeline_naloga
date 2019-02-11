@@ -27,7 +27,7 @@
 }
 .container__text {
     display: inline-block;
-    text-align: center;
+    text-align: left;
     font-size: 21px;
     margin-top: 5%;
     width: 30%;
@@ -192,10 +192,8 @@ a:focus {
   background-color: #FDD530;
   transition: all .5s ease-in-out;
   padding: 5px;
-}
-
-.progressbar li:focus{
-  background-color: black;
+  color: black;
+  font-size: 25px;
 }
 
 .textAppear {

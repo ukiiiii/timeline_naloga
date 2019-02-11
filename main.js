@@ -7,7 +7,6 @@ function Next(index){
     document.getElementById('sld').style.transform = "translateX("+showed_box+"px)";
 }
 
-//
 
 function Previous(){
 
