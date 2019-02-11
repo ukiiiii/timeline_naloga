@@ -244,17 +244,21 @@ a:focus {
 }
 
 .fade {
-  animation: fadeIn 3s;
+  animation: slide-in 2s ease-in-out forwards;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
+
 
 @keyframes pageLoad {
     from { opacity: 0; }
