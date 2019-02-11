@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: grey;
+  line-height: 1.6;
+  -webkit-animation: pageLoad 1s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: pageLoad 1s; /* Firefox < 16 */
+      -ms-animation: pageLoad 1s; /* Internet Explorer */
+       -o-animation: pageLoad 1s; /* Opera < 12.1 */
+          animation: pageLoad 1s;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.main{
+  /* border: 1px solid #000; */
+  /* width:100%; */
+  position: relative;
+  margin-top: 30px;
+  /* background: url('../../images/wood-2.jpg'); */
+  /* background-size: cover;
+  margin: 50px auto; */
+}
+
+.container__image {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    margin: 35px 50px 0 30px;
+}
+.container__text {
+    display: inline-block;
+    text-align: center;
+    font-size: 21px;
+    margin-top: 5%;
+    width: 30%;
+    @media (max-width: 1200px) {
+        width: 100%;
+    }
+
+}
+.first__text {
+    width: 80%;
+    text-align: center;
+    display: inline-block;
+    font-size: 21px;
+    margin-top: 15%;
+    margin-left: 8%;
+}
+
+.box {
+    width: 100%;
+    display: block;
+    /* padding-top: 20px; */
+}
+
+.container{
+  width: 1200px;
+  height: 700px;
+  margin: 20px auto;
+  border: 20px solid #FDD530;
+  position: relative;
+  overflow: hidden;
+  background-color: #FDD530;
+}
+
+.container .slider{
+  width: 7200px;
+  height: 700px;
+  position: absolute;
+  transition: all 1s ease-in-out;
+}
+
+.container .slider .box{
+  float: left;
+  width: 1200px;
+  height: 100%;
+}
+
+/* .main .nav{
+  position: absolute;
+  top: 95%;
+  width: 90px;
+  height: 90px;
+  line-height: 20px;
+  font-size: 15px;
+  color: grey;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  text-align: center;
+  opacity: 0.5;
+  border-radius: 50%;
+} */
+
+.main:hover .nav{
+  opacity: 1;
+  color: #e03ea9;
+}
+
+/* .previous{
+  left: 0;
+} */
+
+
+/* buttons */
+
+.container2 {
+    padding: 20px 40px 40px;
+    width: 1300px;
+    margin: auto;
+    /* margin-bottom: 80px; */
+    position: relative;
+    display: block;
+    /* float: none;
+    text-align: left; */
+    justify-content: center;
+}
+
+.progressbar {
+  text-align: center;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.progressbar li {
+  list-style-type: none;
+  display: inline;
+  float: left;
+  width: calc(100% / 6);
+  position: relative;
+  padding-bottom: 40px;
+  margin: 0 auto;
+}
+
+.progressbar a {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  /* color: grey; */
+}
+
+.white {
+  color: white;
+}
+
+.orange {
+  color: #fc9f30;
+}
+
+.green {
+  color: #a1d52a;
+}
+
+.violet {
+  color: #e03ea9;
+}
+
+.red {
+  color: #fb481e;
+}
+
+.blue {
+  color: #1fb5fc;
+}
+
+.progressbar li::before {
+  content: counter(step);
+  counter-increment: step;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 3px solid grey;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background-color: #fc9f30;
+  /* cursor: pointer; */
+}
+/*
+.innerCircle li:focus {
+
+} */
+
+.progressbar li::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: grey;
+  top: 20px;
+  left: -40%;
+  z-index: -1;
+}
+
+.progressbar li:first-child::after {
+  content: none;
+}
+
+.progressbar .white::before {
+  background-color: white;
+}
+
+.progressbar .green::before {
+  background-color: #a1d52a;
+}
+
+.progressbar .violet::before {
+  background-color: #e03ea9;
+}
+
+.progressbar .red::before {
+  background-color: #fb481e;
+}
+
+.progressbar .blue::before {
+  background-color: #1fb5fc;
+}
+
+a:focus {
+  /* text-decoration: underline; */
+  background-color: #FDD530;
+  transition: all .5s ease-in-out;
+  padding: 5px;
+}
+
+/* .white:active {
+  color: black;
+  background-color: black;
+} */
+
+.progressbar li:focus{
+  background-color: black;
+}
+
+.textAppear {
+  padding-top: 30px;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.fade {
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pageLoad {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes pageLoad {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes pageLoad {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes pageLoad {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes pageLoad {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
